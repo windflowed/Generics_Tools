@@ -7,7 +7,7 @@ import (
 )
 
 func TestMax(t *testing.T) {
-	testCase := []struct {
+	testCases := []struct {
 		name    string
 		slice   []int
 		want    int
@@ -32,7 +32,7 @@ func TestMax(t *testing.T) {
 			wantErr: nil,
 		},
 	}
-	for _, testCase := range testCase {
+	for _, testCase := range testCases {
 		t.Run(testCase.name, func(t *testing.T) {
 			val, err := Max(testCase.slice)
 			assert.Equal(t, testCase.want, err)
@@ -45,7 +45,7 @@ func TestMax(t *testing.T) {
 }
 
 func TestMin(t *testing.T) {
-	testCase := []struct {
+	testCases := []struct {
 		name    string
 		slice   []int
 		want    int
@@ -70,7 +70,7 @@ func TestMin(t *testing.T) {
 			wantErr: nil,
 		},
 	}
-	for _, testCase := range testCase {
+	for _, testCase := range testCases {
 		t.Run(testCase.name, func(t *testing.T) {
 			val, err := Min(testCase.slice)
 			assert.Equal(t, testCase.want, err)
@@ -83,7 +83,7 @@ func TestMin(t *testing.T) {
 }
 
 func TestSum(t *testing.T) {
-	testCase := []struct {
+	testCases := []struct {
 		name    string
 		slice   []int
 		want    int
@@ -108,7 +108,7 @@ func TestSum(t *testing.T) {
 			wantErr: nil,
 		},
 	}
-	for _, testCase := range testCase {
+	for _, testCase := range testCases {
 		t.Run(testCase.name, func(t *testing.T) {
 			val, err := Sum(testCase.slice)
 			assert.Equal(t, testCase.want, err)
@@ -121,7 +121,7 @@ func TestSum(t *testing.T) {
 }
 
 func TestAvg(t *testing.T) {
-	testCase := []struct {
+	testCases := []struct {
 		name    string
 		slice   []int
 		want    int
@@ -146,7 +146,7 @@ func TestAvg(t *testing.T) {
 			wantErr: nil,
 		},
 	}
-	for _, testCase := range testCase {
+	for _, testCase := range testCases {
 		t.Run(testCase.name, func(t *testing.T) {
 			val, err := Avg(testCase.slice)
 			assert.Equal(t, testCase.want, err)
@@ -159,7 +159,7 @@ func TestAvg(t *testing.T) {
 }
 
 func TestCount(t *testing.T) {
-	testCase := []struct {
+	testCases := []struct {
 		name    string
 		slice   []int
 		want    int
@@ -184,7 +184,7 @@ func TestCount(t *testing.T) {
 			wantErr: nil,
 		},
 	}
-	for _, testCase := range testCase {
+	for _, testCase := range testCases {
 		t.Run(testCase.name, func(t *testing.T) {
 			val, err := Count_Distinct(testCase.slice)
 			assert.Equal(t, testCase.want, err)
