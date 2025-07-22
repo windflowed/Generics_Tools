@@ -6,6 +6,7 @@ import (
 	"slices"
 )
 
+// Max 返回最大值
 func Max[T Generics_Tools.RealNumber](sli []T) (T, error) {
 	var res T
 	if len(sli) == 0 {
@@ -20,6 +21,7 @@ func Max[T Generics_Tools.RealNumber](sli []T) (T, error) {
 	return res, nil
 }
 
+// Min 返回最小值
 func Min[T Generics_Tools.RealNumber](sli []T) (T, error) {
 	var res T
 	if len(sli) == 0 {
@@ -34,6 +36,7 @@ func Min[T Generics_Tools.RealNumber](sli []T) (T, error) {
 	return res, nil
 }
 
+// Sum 返回总和
 func Sum[T Generics_Tools.Number](sli []T) (T, error) {
 	var res T
 	if len(sli) == 0 {
@@ -45,6 +48,7 @@ func Sum[T Generics_Tools.Number](sli []T) (T, error) {
 	return res, nil
 }
 
+// Avg 返回平均值
 func Avg[T Generics_Tools.RealNumber](sli []T) (T, error) {
 	var res T
 	if len(sli) == 0 {
@@ -58,6 +62,7 @@ func Avg[T Generics_Tools.RealNumber](sli []T) (T, error) {
 	return sum / T(lens), nil
 }
 
+// Count_Distinct 返回不重复元素的个数
 func Count_Distinct[T Generics_Tools.RealNumber](sli []T) (int, error) {
 	var res int
 	if len(sli) == 0 {

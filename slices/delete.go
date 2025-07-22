@@ -2,6 +2,7 @@ package slices
 
 import "errors"
 
+// Delete 传入切片以及要删除的元素的索引，返回删除后的切片
 func Delete[T any](sli []T, index int) ([]T, error) {
 	if len(sli) == 0 {
 		return nil, errors.New("slice is empty")
